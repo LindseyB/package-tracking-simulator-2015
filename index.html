@@ -4,15 +4,63 @@
 		<title>Package Tracking Simulator 2015</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/progress.css" media="screen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<ol class="progtrckr" data-progtrckr-steps="4">
-			<li class="progtrckr-done">Shipping Info Received</li><!--
-			--><li class="progtrckr-done">Pre-Shipment</li><!--
-			--><li class="progtrckr-done">Shipped</li><!--
-			--><li class="progtrckr-todo">Delivered</li>
-		</ol>
+		<div class="container">
+			<div class="page-header">
+				<h1><i class="fa fa-rocket" id="logo"></i>PTS Tracking&#8482;</h1>
+			</div>
+			<ol class="progtrckr" data-progtrckr-steps="4">
+				<li class="progtrckr-done">Shipping Info Received</li><!--
+				--><li class="progtrckr-done">Pre-Shipment</li><!--
+				--><li class="progtrckr-done">Shipped</li><!--
+				--><li class="progtrckr-todo">Delivered</li>
+			</ol>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Expected Delivery Day:</h4>
+					<h4 id="delivery-date">Friday May 20, 2015</h4>
+					<h4>Destination:</h4>
+					<h4 id="destination">New York, NY</h4>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-default" id="refresh">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh (R)
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<table class="table table-striped table-bordered">
+				<tr>
+					<th>Date &amp; Time</th>
+					<th>Status of Item</th>
+					<th>Location</th>
+				</tr>
+				<tr>
+					<td>Friday May 20, 2015</td>
+					<td>Processed at PTS Sort Facility</td>
+					<td>New York, NY</td>
+				</tr>
+				<tr>
+					<td>Friday May 20, 2015</td>
+					<td>Accepted at PTS Sort Facility</td>
+					<td>New York, NY</td>
+				</tr>
+				<tr>
+					<td>Friday May 20, 2015</td>
+					<td>Electronic Shipping Info Received</td>
+					<td>New York, NY</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>

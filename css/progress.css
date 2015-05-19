@@ -1,7 +1,9 @@
 ol.progtrckr {
     margin: 0;
     padding: 0;
+    padding-bottom: 4em;
     list-style-type none;
+    font-size: 1.6em;
 }
 
 ol.progtrckr li {
@@ -32,6 +34,7 @@ ol.progtrckr li.progtrckr-todo {
 ol.progtrckr li:after {
     content: "\00a0\00a0";
 }
+
 ol.progtrckr li:before {
     position: relative;
     bottom: -2.5em;
@@ -39,6 +42,7 @@ ol.progtrckr li:before {
     left: 50%;
     line-height: 1em;
 }
+
 ol.progtrckr li.progtrckr-done:before {
     content: "\2713";
     color: white;
@@ -49,6 +53,7 @@ ol.progtrckr li.progtrckr-done:before {
     border: none;
     border-radius: 1.2em;
 }
+
 ol.progtrckr li.progtrckr-todo:before {
     content: "\039F";
     color: silver;

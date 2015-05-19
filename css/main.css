@@ -1,0 +1,19 @@
+#logo {
+	color: yellowgreen;
+	padding-right: 0.5em;
+	text-shadow: 1px 1px 11px rgba(150, 150, 150, 0.16);
+}
+
+#refresh {
+	float: right;
+	margin-right: 3em;
+	margin-top: 2em;
+}
+
+#delivery-date, #destination {
+	color: yellowgreen;
+}
+
+table {
+	margin-top: 1em;
+}
