@@ -7,11 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				You've Successfully Received Your Package.
+				<a href="#" onclick="window.location.reload(true);">Another!</a>
+			</div>
 			<div class="page-header">
 				<h1><i class="fa fa-rocket" id="logo"></i>PTS Tracking&#8482;</h1>
 			</div>
@@ -26,9 +31,9 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Expected Delivery Day:</h4>
-					<h4 id="delivery-date">Friday May 20, 2015</h4>
+					<h4 id="delivery-date"></h4>
 					<h4>Destination:</h4>
-					<h4 id="destination">New York, NY</h4>
+					<h4 id="destination"></h4>
 				</div>
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
@@ -40,27 +45,36 @@
 		</div>
 		<div class="container">
 			<table class="table table-striped table-bordered">
-				<tr>
-					<th>Date &amp; Time</th>
-					<th>Status of Item</th>
-					<th>Location</th>
-				</tr>
-				<tr>
-					<td>Friday May 20, 2015</td>
-					<td>Processed at PTS Sort Facility</td>
-					<td>New York, NY</td>
-				</tr>
-				<tr>
-					<td>Friday May 20, 2015</td>
-					<td>Accepted at PTS Sort Facility</td>
-					<td>New York, NY</td>
-				</tr>
-				<tr>
-					<td>Friday May 20, 2015</td>
-					<td>Electronic Shipping Info Received</td>
-					<td>New York, NY</td>
-				</tr>
+				<thead>
+					<tr>
+						<th>Date &amp; Time</th>
+						<th>Status of Item</th>
+						<th>Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="start-date"></td>
+						<td>Processed at PTS Sort Facility</td>
+						<td class="start-loc"></td>
+					</tr>
+					<tr>
+						<td class="start-date"></td>
+						<td>Accepted at PTS Sort Facility</td>
+						<td class="start-loc"></td>
+					</tr>
+					<tr>
+						<td class="start-date"></td>
+						<td>Electronic Shipping Info Received</td>
+						<td class="start-loc"></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
+		<script src="js/chance.min.js"></script>
+		<script src="js/moment.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/pts.js"></script>
 	</body>
 </html>
