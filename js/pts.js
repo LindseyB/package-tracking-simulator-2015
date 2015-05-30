@@ -31,8 +31,8 @@ function progress() {
 
 	if(won){return;}
 
-	// 100+ rows pity party
-	if(Math.floor(Math.random()*3)+1 == 1 && $('tr').length > 100){
+	// 300+ rows pity party
+	if(Math.floor(Math.random()*3)+1 == 1 && $('tr').length > 300){
 		curLocation = destination;
 	}
 
