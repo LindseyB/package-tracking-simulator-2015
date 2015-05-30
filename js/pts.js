@@ -25,7 +25,8 @@ function setup() {
 function progress() {
 	var actions = ['Processed Through Sort Facility', 'Re-routed', 'Shipping Exception', 'Weather Delay', 'Colossal Mutant Lizard'];
 	var tablePrepend = "";
-	curDate.add(Math.floor(Math.random()*3)+1, "days")
+	curDate.add(Math.floor(Math.random()*3)+1, "days");
+	if (curDate.day() == 0) { curDate.add(1, 'days'); }
 	curDateString = curDate.format(dateFormat);
 	curLocation = chance.city() + ", " + chance.state();
 
@@ -51,6 +52,7 @@ function progress() {
 	} else {
 		if(curDate.isAfter(deliveryDate)){
 			deliveryDate = curDate.clone().add(Math.floor(Math.random()*10)+1, 'days');
+			if (deliveryDate.day() == 0) { deliveryDate.add(1, 'days'); }
 			$('#delivery-date').text(deliveryDate.format(dateFormat));
 		}
 
