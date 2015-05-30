@@ -50,7 +50,7 @@ function progress() {
 		won = true;
 	} else {
 		if(curDate.isAfter(deliveryDate)){
-			deliveryDate = curDate.add(Math.floor(Math.random()*10)+1, 'days');
+			deliveryDate = curDate.clone().add(Math.floor(Math.random()*10)+1, 'days');
 			$('#delivery-date').text(deliveryDate.format(dateFormat));
 		}
 
